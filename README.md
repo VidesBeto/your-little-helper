@@ -1,4 +1,4 @@
-# Aria — Estúdio de Beleza
+# Meraki Studio — Estúdio de Beleza
 
 Landing page premium para um estúdio de beleza, criada para substituir a página placeholder do projeto `your-little-helper`.
 
@@ -26,4 +26,4 @@ Troque:
 - Instagram;
 - textos e serviços.
 
-As imagens usadas no protótipo são de demonstração. Para produção, substitua por fotos autorizadas do Aria.
+As imagens usadas no protótipo são de demonstração. Para produção, substitua por fotos autorizadas do Meraki Studio.
