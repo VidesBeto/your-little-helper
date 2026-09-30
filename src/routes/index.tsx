@@ -1,15 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight, Instagram, MapPin, Menu, Sparkles, Star, X,
-  Scissors, Palette, Heart, Flower2, Gem, Clock, Droplets,
+  Scissors, Palette, Heart, Flower2, Clock, Droplets,
   WandSparkles, Brush, CircleHelp, ChevronDown
 } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/")({ component: MerakiHome });
 
-const WHATSAPP = "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Ftmu856%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadS-Dzj32FH8QGXjIZWgP2zTECXtpLpW9Nym8CjsKeMNokLUfmk0WhsKMXUAg_aem_URV7fmSUJhcT8MmmGI5bOw&e=AUBeQ1SnkDxF0x1MBherOiUobwO1y2NckvcJYI5bvDgxP_UahZRcPypsAl1ls4tR7Aiesdg-4X9F_fjVBsRrWJEXLOnodgXdKRytangI2L6_mzIxGBDjyLVD22z0I96shU4Nwxi0gsML5Ga0O-RiHLI";
-const INSTAGRAM = "https://www.instagram.com/merakistudiorj/followers/mutualOnly";
+const WHATSAPP = "https://wa.link/tmu856";
+const INSTAGRAM = "https://www.instagram.com/merakistudiorj/";
 
 const services = [
   { icon: Sparkles, title: "Mechas — Luz e Sombra" },
@@ -64,22 +64,16 @@ function MerakiHome() {
           <img className="brand-logo" src="/meraki-logo.svg" alt="Meraki Studio" />
           <span className="brand-name">meraki</span>
         </a>
-
         <nav className={openMenu ? "nav open" : "nav"}>
           <button onClick={() => scrollTo("sobre")}>O estúdio</button>
           <button onClick={() => scrollTo("servicos")}>Serviços</button>
           <button onClick={() => scrollTo("faq")}>Dúvidas</button>
           <button onClick={() => scrollTo("contato")}>Contato</button>
         </nav>
-
         <div className="header-actions">
-          <a className="instagram" href={INSTAGRAM} target="_blank" rel="noreferrer" aria-label="Instagram Meraki">
-            <Instagram size={17} />
-          </a>
-          <button className="menu-button" onClick={() => setOpenMenu(!openMenu)} aria-label="Abrir menu">
-            {openMenu ? <X /> : <Menu />}
-          </button>
-          <a className="header-cta" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar <ArrowRight size={16} /></a>
+          <a className="instagram" href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram Meraki"><Instagram size={17} /></a>
+          <button className="menu-button" onClick={() => setOpenMenu(!openMenu)} aria-label="Abrir menu">{openMenu ? <X /> : <Menu />}</button>
+          <a className="header-cta" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Agendar <ArrowRight size={16} /></a>
         </div>
       </header>
 
@@ -88,42 +82,28 @@ function MerakiHome() {
           <div className="hero-copy">
             <p className="eyebrow"><Sparkles size={14} /> MERAKI STUDIO</p>
             <h1>Beleza que<br /><em>carrega essência.</em></h1>
-            <p className="hero-text">
-              Um espaço pensado para cuidar dos seus cabelos com técnica, atenção aos detalhes e resultados que respeitam a sua identidade.
-            </p>
+            <p className="hero-text">Um espaço pensado para cuidar dos seus cabelos com técnica, atenção aos detalhes e resultados que respeitam a sua identidade.</p>
             <div className="hero-buttons">
-              <a className="button dark" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar meu horário <ArrowRight size={17} /></a>
+              <a className="button dark" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Agendar meu horário <ArrowRight size={17} /></a>
               <button className="text-button" onClick={() => scrollTo("sobre")}>Conhecer o Meraki</button>
             </div>
             <div className="hero-note"><span className="dot" /> Atendimento exclusivamente com hora marcada</div>
           </div>
-
           <div className="hero-image">
             <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Interior sofisticado de um estúdio de beleza" />
-            <div className="hero-card">
-              <span>MERAKI</span>
-              <strong>Colocar sua essência em tudo o que você faz.</strong>
-            </div>
+            <div className="hero-card"><span>MERAKI</span><strong>Colocar sua essência em tudo o que você faz.</strong></div>
           </div>
         </section>
 
         <section className="meaning-strip">
           <div className="meaning-logo"><img src="/meraki-logo.svg" alt="" /></div>
-          <div>
-            <p className="eyebrow">O SIGNIFICADO DE MERAKI</p>
-            <p className="meaning-text">“Colocar sua essência em tudo o que você faz.”</p>
-          </div>
+          <div><p className="eyebrow">O SIGNIFICADO DE MERAKI</p><p className="meaning-text">“Colocar sua essência em tudo o que você faz.”</p></div>
         </section>
 
-        <section className="intro-strip">
-          <p>cuidado</p><span>✦</span><p>beleza</p><span>✦</span><p>presença</p><span>✦</span><p>essência</p>
-        </section>
+        <section className="intro-strip"><p>cuidado</p><span>✦</span><p>beleza</p><span>✦</span><p>presença</p><span>✦</span><p>essência</p></section>
 
         <section id="sobre" className="about section">
-          <div className="about-image">
-            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Mulher em momento de autocuidado" />
-            <div className="vertical-label">MERAKI STUDIO</div>
-          </div>
+          <div className="about-image"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Mulher em momento de autocuidado" /><div className="vertical-label">MERAKI STUDIO</div></div>
           <div className="about-copy">
             <p className="eyebrow">SOBRE O MERAKI</p>
             <h2>Mais do que um serviço.<br /><em>Um cuidado com intenção.</em></h2>
@@ -134,108 +114,36 @@ function MerakiHome() {
         </section>
 
         <section id="servicos" className="services section">
-          <div className="section-heading center">
-            <p className="eyebrow">SERVIÇOS DO ESTÚDIO</p>
-            <h2>Seu cabelo,<br /><em>do seu jeito.</em></h2>
-            <p>Escolha seu cuidado. A equipe Meraki cuida do resto.</p>
-          </div>
+          <div className="section-heading center"><p className="eyebrow">SERVIÇOS DO ESTÚDIO</p><h2>Seu cabelo,<br /><em>do seu jeito.</em></h2><p>Escolha seu cuidado. A equipe Meraki cuida do resto.</p></div>
           <div className="services-grid">
-            {services.map(({ icon: Icon, title }) => (
-              <article className="service-card" key={title}>
-                <Icon size={24} strokeWidth={1.25} />
-                <h3>{title}</h3>
-                <button onClick={() => scrollTo("agendar")}>Agendar este serviço <ArrowRight size={15} /></button>
-              </article>
-            ))}
+            {services.map(({ icon: Icon, title }) => <article className="service-card" key={title}><Icon size={24} strokeWidth={1.25} /><h3>{title}</h3><a href={WHATSAPP} target="_blank" rel="noopener noreferrer">Agendar este serviço <ArrowRight size={15} /></a></article>)}
           </div>
         </section>
 
         <section id="experiencia" className="experience">
-          <div className="experience-image">
-            <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85" alt="Profissional realizando um tratamento de beleza" />
-          </div>
+          <div className="experience-image"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85" alt="Profissional realizando um tratamento de beleza" /></div>
           <div className="experience-copy">
-            <p className="eyebrow">A EXPERIÊNCIA MERAKI</p>
-            <h2>Entre.<br /><em>Respire.</em><br />Cuide-se.</h2>
+            <p className="eyebrow">A EXPERIÊNCIA MERAKI</p><h2>Entre.<br /><em>Respire.</em><br />Cuide-se.</h2>
             <p>Seu horário é reservado para você. Um atendimento com calma, conversa, diagnóstico e atenção aos detalhes — porque cada cabelo tem uma história diferente.</p>
-            <div className="experience-points">
-              <span><Clock size={18} /> Atendimento com hora marcada</span>
-              <span><Sparkles size={18} /> Avaliação individual</span>
-              <span><Heart size={18} /> Tratamento reconstrutor nas mechas</span>
-            </div>
+            <div className="experience-points"><span><Clock size={18} /> Atendimento com hora marcada</span><span><Sparkles size={18} /> Avaliação individual</span><span><Heart size={18} /> Tratamento reconstrutor nas mechas</span></div>
           </div>
         </section>
 
         <section id="faq" className="faq section">
-          <div className="faq-intro">
-            <p className="eyebrow"><CircleHelp size={14} /> PERGUNTAS FREQUENTES</p>
-            <h2>Antes de marcar,<br /><em>tire suas dúvidas.</em></h2>
-            <p>Reunimos as perguntas que mais recebemos para deixar sua experiência ainda mais tranquila.</p>
-          </div>
+          <div className="faq-intro"><p className="eyebrow"><CircleHelp size={14} /> PERGUNTAS FREQUENTES</p><h2>Antes de marcar,<br /><em>tire suas dúvidas.</em></h2><p>Reunimos as perguntas que mais recebemos para deixar sua experiência ainda mais tranquila.</p></div>
           <div className="faq-list">
-            {faqs.map(([question, answer], index) => {
-              const isOpen = openFaq === index;
-              return (
-                <div className={isOpen ? "faq-item active" : "faq-item"} key={question}>
-                  <button className="faq-question" onClick={() => setOpenFaq(isOpen ? null : index)} aria-expanded={isOpen}>
-                    <span>{question}</span>
-                    <ChevronDown size={18} />
-                  </button>
-                  <div className="faq-answer" aria-hidden={!isOpen}>
-                    <p>{answer}</p>
-                  </div>
-                </div>
-              );
-            })}
+            {faqs.map(([question, answer], index) => { const isOpen = openFaq === index; return <div className={isOpen ? "faq-item active" : "faq-item"} key={question}><button className="faq-question" onClick={() => setOpenFaq(isOpen ? null : index)} aria-expanded={isOpen}><span>{question}</span><ChevronDown size={18} /></button><div className="faq-answer" aria-hidden={!isOpen}><p>{answer}</p></div></div>; })}
           </div>
         </section>
 
-        <section className="testimonials section">
-          <div className="section-heading center">
-            <p className="eyebrow">QUEM VIVE O MERAKI</p>
-            <h2>Palavras que <em>ficam.</em></h2>
-          </div>
-          <div className="testimonial-grid">
-            {testimonials.map((item) => (
-              <article className="testimonial" key={item.name}>
-                <div className="stars">{[1,2,3,4,5].map((n) => <Star key={n} size={14} fill="currentColor" />)}</div>
-                <p>“{item.text}”</p>
-                <strong>{item.name}</strong>
-              </article>
-            ))}
-          </div>
-        </section>
+        <section className="testimonials section"><div className="section-heading center"><p className="eyebrow">QUEM VIVE O MERAKI</p><h2>Palavras que <em>ficam.</em></h2></div><div className="testimonial-grid">{testimonials.map((item) => <article className="testimonial" key={item.name}><div className="stars">{[1,2,3,4,5].map((n) => <Star key={n} size={14} fill="currentColor" />)}</div><p>“{item.text}”</p><strong>{item.name}</strong></article>)}</div></section>
 
-        <section id="agendar" className="booking">
-          <div>
-            <p className="eyebrow">SEU PRÓXIMO MOMENTO</p>
-            <h2>Vamos reservar<br /><em>um tempo para você?</em></h2>
-            <p>Fale com o Meraki pelo WhatsApp e agende seu horário.</p>
-          </div>
-          <a className="button light" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <ArrowRight size={17} /></a>
-        </section>
+        <section id="agendar" className="booking"><div><p className="eyebrow">SEU PRÓXIMO MOMENTO</p><h2>Vamos reservar<br /><em>um tempo para você?</em></h2><p>Fale com o Meraki pelo WhatsApp e agende seu horário.</p></div><a className="button light" href={WHATSAPP} target="_blank" rel="noopener noreferrer">Agendar pelo WhatsApp <ArrowRight size={17} /></a></section>
 
-        <section id="contato" className="contact section">
-          <div>
-            <p className="eyebrow">FALE COM O MERAKI</p>
-            <h2>Seu lugar de<br /><em>pausa.</em></h2>
-            <p className="contact-line"><MapPin size={18} /> Rio de Janeiro — RJ</p>
-            <p className="contact-line"><Clock size={18} /> Atendimento exclusivamente com hora marcada</p>
-            <a className="contact-instagram" href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram size={17} /> @merakistudiorj</a>
-          </div>
-          <div className="map-placeholder">
-            <img src="/meraki-logo.svg" alt="Meraki" />
-            <small>Rio de Janeiro · RJ</small>
-          </div>
-        </section>
+        <section id="contato" className="contact section"><div><p className="eyebrow">FALE COM O MERAKI</p><h2>Seu lugar de<br /><em>pausa.</em></h2><p className="contact-line"><MapPin size={18} /> Rio de Janeiro — RJ</p><p className="contact-line"><Clock size={18} /> Atendimento exclusivamente com hora marcada</p><a className="contact-instagram" href={INSTAGRAM} target="_blank" rel="noopener noreferrer"><Instagram size={17} /> @merakistudiorj</a></div><div className="map-placeholder"><img src="/meraki-logo.svg" alt="Meraki" /><small>Rio de Janeiro · RJ</small></div></section>
       </main>
 
-      <footer className="footer">
-        <div className="brand"><img className="brand-logo" src="/meraki-logo.svg" alt="Meraki Studio" /><span className="brand-name">meraki</span></div>
-        <p>Colocar sua essência em tudo o que você faz.</p>
-        <a href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram size={17} /> @merakistudiorj</a>
-        <small>© 2026 Meraki Studio</small>
-      </footer>
+      <footer className="footer"><div className="brand"><img className="brand-logo" src="/meraki-logo.svg" alt="Meraki Studio" /><span className="brand-name">meraki</span></div><p>Colocar sua essência em tudo o que você faz.</p><a href={INSTAGRAM} target="_blank" rel="noopener noreferrer"><Instagram size={17} /> @merakistudiorj</a><small>© 2026 Meraki Studio</small></footer>
     </div>
   );
 }
