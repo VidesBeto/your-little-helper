@@ -6,7 +6,7 @@ import appCss from "../styles.css?url";
 function NotFound() {
   return (
     <main className="not-found">
-      <p className="eyebrow">ARIA</p>
+      <p className="eyebrow">MERAKI STUDIO</p>
       <h1>Essa página não existe.</h1>
       <Link to="/">Voltar para o início</Link>
     </main>
@@ -18,10 +18,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Aria — Estúdio de Beleza" },
-      { name: "description", content: "Beleza com intenção, cuidado e leveza. Conheça o Aria Estúdio de Beleza." },
-      { property: "og:title", content: "Aria — Estúdio de Beleza" },
-      { property: "og:description", content: "Um espaço de beleza pensado para você." },
+      { title: "Meraki Studio — Beleza com essência" },
+      { name: "description", content: "Meraki Studio: colocar sua essência em tudo o que você faz. Serviços para cabelos e beleza com atendimento personalizado." },
+      { property: "og:title", content: "Meraki Studio — Beleza com essência" },
+      { property: "og:description", content: "Colocar sua essência em tudo o que você faz." },
       { property: "og:type", content: "website" }
     ],
     links: [{ rel: "stylesheet", href: appCss }]
