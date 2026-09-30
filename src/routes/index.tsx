@@ -1,20 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
 import {
   ArrowRight, Instagram, MapPin, Menu, Sparkles, Star, X,
-  Scissors, Palette, Heart, Flower2, Gem, Clock
+  Scissors, Palette, Heart, Flower2, Gem, Clock, Droplets,
+  WandSparkles, Brush, CircleHelp, ChevronDown
 } from "lucide-react";
 import { useState } from "react";
 
-export const Route = createFileRoute("/")({ component: AriaHome });
+export const Route = createFileRoute("/")({ component: MerakiHome });
+
+const WHATSAPP = "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2Ftmu856%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAadS-Dzj32FH8QGXjIZWgP2zTECXtpLpW9Nym8CjsKeMNokLUfmk0WhsKMXUAg_aem_URV7fmSUJhcT8MmmGI5bOw&e=AUBeQ1SnkDxF0x1MBherOiUobwO1y2NckvcJYI5bvDgxP_UahZRcPypsAl1ls4tR7Aiesdg-4X9F_fjVBsRrWJEXLOnodgXdKRytangI2L6_mzIxGBDjyLVD22z0I96shU4Nwxi0gsML5Ga0O-RiHLI";
+const INSTAGRAM = "https://www.instagram.com/merakistudiorj/followers/mutualOnly";
 
 const services = [
-  { icon: Scissors, title: "Corte & Styling", text: "Cortes personalizados, escova e finalização que respeitam sua identidade." },
-  { icon: Palette, title: "Coloração", text: "Cores sofisticadas e técnicas personalizadas para iluminar o seu visual." },
-  { icon: Sparkles, title: "Mechas & Balayage", text: "Iluminação natural, morena iluminada e resultados delicados." },
-  { icon: Heart, title: "Tratamentos", text: "Rituais de cuidado para devolver força, movimento e brilho aos fios." },
-  { icon: Flower2, title: "Sobrancelhas", text: "Design delicado e personalizado para valorizar o seu olhar." },
-  { icon: Gem, title: "Manicure", text: "Um cuidado completo para você sair se sentindo ainda mais especial." },
+  { icon: Sparkles, title: "Mechas — Luz e Sombra" },
+  { icon: Sparkles, title: "Mechas — Morena Iluminada" },
+  { icon: Sparkles, title: "Mechas — Mega Blonde" },
+  { icon: WandSparkles, title: "Topo e Contorno" },
+  { icon: Droplets, title: "Progressiva" },
+  { icon: Heart, title: "Botox" },
+  { icon: Heart, title: "Cronograma Capilar — 4 sessões" },
+  { icon: Brush, title: "Escova c/ Chapinha" },
+  { icon: Palette, title: "Camuflagem de Fios Brancos" },
+  { icon: Palette, title: "Coloração Simples" },
+  { icon: Palette, title: "Coloração Chocolate / Ruivo" },
+  { icon: Brush, title: "Escova c/ Babyliss" },
+  { icon: Droplets, title: "Detox com Argila" },
+  { icon: Flower2, title: "Penteado Simples" },
+  { icon: Scissors, title: "Trança" },
+  { icon: Scissors, title: "Corte" },
 ];
+
+const faqs = [
+  ["Qual o valor das mechas?", "A partir de R$399. O valor pode variar conforme o comprimento e volume do cabelo."],
+  ["Quanto tempo demora o processo de mechas?", "Não há um tempo exato, pois cada cabelo responde de uma forma. Recomendamos reservar o dia para o procedimento."],
+  ["Meu cabelo tem progressiva, posso fazer mechas?", "Sim! É necessário respeitar o intervalo de pelo menos 1 mês e realizar o teste de mecha."],
+  ["Tenho tinta escura. Consigo chegar a um tom mais claro?", "Depende da resposta do cabelo. O teste de mecha é indispensável para avaliarmos a possibilidade."],
+  ["O tratamento está incluso no serviço de mechas?", "Sim! O serviço inclui tratamento reconstrutor."],
+  ["A progressiva é com ou sem formol?", "Trabalhamos exclusivamente com progressiva sem formol e sem glioxílico, com ativos importados."],
+  ["Quanto tempo preciso esperar para fazer outra química?", "Recomendamos um intervalo mínimo de 1 mês, sempre avaliando a saúde do cabelo."],
+  ["De quanto em quanto tempo preciso retocar as mechas ou a progressiva?", "Depende do crescimento e da necessidade de cada cabelo."],
+  ["O atendimento é somente com hora marcada?", "Sim! Nosso atendimento é exclusivamente com hora marcada."],
+] as const;
 
 const testimonials = [
   { name: "Mariana", text: "O atendimento é acolhedor e o resultado ficou exatamente como eu imaginava." },
@@ -22,60 +48,70 @@ const testimonials = [
   { name: "Juliana", text: "Amei cada detalhe. Saí renovada e já estou planejando a próxima visita." },
 ];
 
-function AriaHome() {
-  const [open, setOpen] = useState(false);
+function MerakiHome() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setOpen(false);
+    setOpenMenu(false);
   };
 
   return (
-    <div className="aria-page">
+    <div className="meraki-page">
       <header className="site-header">
         <a className="brand" href="#inicio" onClick={() => scrollTo("inicio")}>
-          <span className="brand-mark">a</span>
-          <span>aria</span>
+          <img className="brand-logo" src="/meraki-logo.svg" alt="Meraki Studio" />
+          <span className="brand-name">meraki</span>
         </a>
 
-        <nav className={open ? "nav open" : "nav"}>
+        <nav className={openMenu ? "nav open" : "nav"}>
           <button onClick={() => scrollTo("sobre")}>O estúdio</button>
           <button onClick={() => scrollTo("servicos")}>Serviços</button>
-          <button onClick={() => scrollTo("experiencia")}>Experiência</button>
+          <button onClick={() => scrollTo("faq")}>Dúvidas</button>
           <button onClick={() => scrollTo("contato")}>Contato</button>
         </nav>
 
         <div className="header-actions">
-          <a className="instagram" href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
+          <a className="instagram" href={INSTAGRAM} target="_blank" rel="noreferrer" aria-label="Instagram Meraki">
             <Instagram size={17} />
           </a>
-          <button className="menu-button" onClick={() => setOpen(!open)} aria-label="Abrir menu">
-            {open ? <X /> : <Menu />}
+          <button className="menu-button" onClick={() => setOpenMenu(!openMenu)} aria-label="Abrir menu">
+            {openMenu ? <X /> : <Menu />}
           </button>
-          <button className="header-cta" onClick={() => scrollTo("agendar")}>Agendar <ArrowRight size={16} /></button>
+          <a className="header-cta" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar <ArrowRight size={16} /></a>
         </div>
       </header>
 
       <main>
         <section id="inicio" className="hero">
           <div className="hero-copy">
-            <p className="eyebrow"><Sparkles size={14} /> ESTÚDIO DE BELEZA</p>
-            <h1>Beleza que<br /><em>começa em você.</em></h1>
+            <p className="eyebrow"><Sparkles size={14} /> MERAKI STUDIO</p>
+            <h1>Beleza que<br /><em>carrega essência.</em></h1>
             <p className="hero-text">
-              Um espaço criado para desacelerar, cuidar de você e revelar uma beleza autêntica, leve e atemporal.
+              Um espaço pensado para cuidar dos seus cabelos com técnica, atenção aos detalhes e resultados que respeitam a sua identidade.
             </p>
             <div className="hero-buttons">
-              <button className="button dark" onClick={() => scrollTo("agendar")}>Agendar meu horário <ArrowRight size={17} /></button>
-              <button className="text-button" onClick={() => scrollTo("sobre")}>Conhecer o Aria</button>
+              <a className="button dark" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar meu horário <ArrowRight size={17} /></a>
+              <button className="text-button" onClick={() => scrollTo("sobre")}>Conhecer o Meraki</button>
             </div>
-            <div className="hero-note"><span className="dot" /> Atendimento com hora marcada</div>
+            <div className="hero-note"><span className="dot" /> Atendimento exclusivamente com hora marcada</div>
           </div>
+
           <div className="hero-image">
             <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Interior sofisticado de um estúdio de beleza" />
             <div className="hero-card">
-              <span>Seu momento</span>
-              <strong>merece ser só seu.</strong>
+              <span>MERAKI</span>
+              <strong>Colocar sua essência em tudo o que você faz.</strong>
             </div>
+          </div>
+        </section>
+
+        <section className="meaning-strip">
+          <div className="meaning-logo"><img src="/meraki-logo.svg" alt="" /></div>
+          <div>
+            <p className="eyebrow">O SIGNIFICADO DE MERAKI</p>
+            <p className="meaning-text">“Colocar sua essência em tudo o que você faz.”</p>
           </div>
         </section>
 
@@ -86,30 +122,29 @@ function AriaHome() {
         <section id="sobre" className="about section">
           <div className="about-image">
             <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Mulher em momento de autocuidado" />
-            <div className="vertical-label">ARIA ESTÚDIO</div>
+            <div className="vertical-label">MERAKI STUDIO</div>
           </div>
           <div className="about-copy">
-            <p className="eyebrow">SOBRE O ARIA</p>
-            <h2>Mais do que beleza.<br /><em>Um ritual para você.</em></h2>
-            <p>O Aria nasceu da vontade de transformar o cuidado em uma experiência. Aqui, cada detalhe foi pensado para que você se sinta acolhida, ouvida e verdadeiramente presente.</p>
-            <p>Unimos técnica, sensibilidade e um olhar contemporâneo para criar resultados que combinam com quem você é.</p>
-            <div className="signature">aria<span>✦</span></div>
+            <p className="eyebrow">SOBRE O MERAKI</p>
+            <h2>Mais do que um serviço.<br /><em>Um cuidado com intenção.</em></h2>
+            <p>O Meraki acredita que beleza também é expressão. Cada atendimento é pensado para entender o seu cabelo, respeitar sua individualidade e entregar um resultado que faça sentido para você.</p>
+            <p>Do diagnóstico ao acabamento, técnica e cuidado caminham juntos para que você viva uma experiência especial do início ao fim.</p>
+            <div className="signature">meraki<span>✦</span></div>
           </div>
         </section>
 
         <section id="servicos" className="services section">
           <div className="section-heading center">
-            <p className="eyebrow">NOSSOS SERVIÇOS</p>
-            <h2>Seu cuidado,<br /><em>do seu jeito.</em></h2>
-            <p>Escolha seu momento. A gente cuida do resto.</p>
+            <p className="eyebrow">SERVIÇOS DO ESTÚDIO</p>
+            <h2>Seu cabelo,<br /><em>do seu jeito.</em></h2>
+            <p>Escolha seu cuidado. A equipe Meraki cuida do resto.</p>
           </div>
           <div className="services-grid">
-            {services.map(({ icon: Icon, title, text }) => (
+            {services.map(({ icon: Icon, title }) => (
               <article className="service-card" key={title}>
-                <Icon size={25} strokeWidth={1.25} />
+                <Icon size={24} strokeWidth={1.25} />
                 <h3>{title}</h3>
-                <p>{text}</p>
-                <button onClick={() => scrollTo("agendar")}>Saiba mais <ArrowRight size={15} /></button>
+                <button onClick={() => scrollTo("agendar")}>Agendar este serviço <ArrowRight size={15} /></button>
               </article>
             ))}
           </div>
@@ -120,20 +155,44 @@ function AriaHome() {
             <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85" alt="Profissional realizando um tratamento de beleza" />
           </div>
           <div className="experience-copy">
-            <p className="eyebrow">A EXPERIÊNCIA ARIA</p>
-            <h2>Entre.<br /><em>Respire.</em><br />Reconecte-se.</h2>
-            <p>Você não precisa esperar uma ocasião especial para se cuidar. No Aria, o momento especial é o momento em que você escolhe parar e olhar para si.</p>
+            <p className="eyebrow">A EXPERIÊNCIA MERAKI</p>
+            <h2>Entre.<br /><em>Respire.</em><br />Cuide-se.</h2>
+            <p>Seu horário é reservado para você. Um atendimento com calma, conversa, diagnóstico e atenção aos detalhes — porque cada cabelo tem uma história diferente.</p>
             <div className="experience-points">
-              <span><Clock size={18} /> Horário reservado para você</span>
-              <span><Sparkles size={18} /> Atendimento personalizado</span>
-              <span><Heart size={18} /> Produtos selecionados</span>
+              <span><Clock size={18} /> Atendimento com hora marcada</span>
+              <span><Sparkles size={18} /> Avaliação individual</span>
+              <span><Heart size={18} /> Tratamento reconstrutor nas mechas</span>
             </div>
+          </div>
+        </section>
+
+        <section id="faq" className="faq section">
+          <div className="faq-intro">
+            <p className="eyebrow"><CircleHelp size={14} /> PERGUNTAS FREQUENTES</p>
+            <h2>Antes de marcar,<br /><em>tire suas dúvidas.</em></h2>
+            <p>Reunimos as perguntas que mais recebemos para deixar sua experiência ainda mais tranquila.</p>
+          </div>
+          <div className="faq-list">
+            {faqs.map(([question, answer], index) => {
+              const isOpen = openFaq === index;
+              return (
+                <div className={isOpen ? "faq-item active" : "faq-item"} key={question}>
+                  <button className="faq-question" onClick={() => setOpenFaq(isOpen ? null : index)} aria-expanded={isOpen}>
+                    <span>{question}</span>
+                    <ChevronDown size={18} />
+                  </button>
+                  <div className="faq-answer" aria-hidden={!isOpen}>
+                    <p>{answer}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
 
         <section className="testimonials section">
           <div className="section-heading center">
-            <p className="eyebrow">QUEM VIVE O ARIA</p>
+            <p className="eyebrow">QUEM VIVE O MERAKI</p>
             <h2>Palavras que <em>ficam.</em></h2>
           </div>
           <div className="testimonial-grid">
@@ -151,30 +210,31 @@ function AriaHome() {
           <div>
             <p className="eyebrow">SEU PRÓXIMO MOMENTO</p>
             <h2>Vamos reservar<br /><em>um tempo para você?</em></h2>
-            <p>Escolha seu serviço e venha viver a experiência Aria.</p>
+            <p>Fale com o Meraki pelo WhatsApp e agende seu horário.</p>
           </div>
-          <a className="button light" href="https://wa.me/5500000000000" target="_blank" rel="noreferrer">Agendar pelo WhatsApp <ArrowRight size={17} /></a>
+          <a className="button light" href={WHATSAPP} target="_blank" rel="noreferrer">Agendar pelo WhatsApp <ArrowRight size={17} /></a>
         </section>
 
         <section id="contato" className="contact section">
           <div>
-            <p className="eyebrow">ONDE ESTAMOS</p>
+            <p className="eyebrow">FALE COM O MERAKI</p>
             <h2>Seu lugar de<br /><em>pausa.</em></h2>
-            <p className="contact-line"><MapPin size={18} /> Rua Exemplo, 123 — Rio de Janeiro, RJ</p>
-            <p className="contact-line"><Clock size={18} /> Terça a sábado · 9h às 19h</p>
+            <p className="contact-line"><MapPin size={18} /> Rio de Janeiro — RJ</p>
+            <p className="contact-line"><Clock size={18} /> Atendimento exclusivamente com hora marcada</p>
+            <a className="contact-instagram" href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram size={17} /> @merakistudiorj</a>
           </div>
           <div className="map-placeholder">
-            <span>ARIA</span>
+            <img src="/meraki-logo.svg" alt="Meraki" />
             <small>Rio de Janeiro · RJ</small>
           </div>
         </section>
       </main>
 
       <footer className="footer">
-        <div className="brand"><span className="brand-mark">a</span><span>aria</span></div>
-        <p>Beleza com intenção.</p>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer"><Instagram size={17} /> @aria.estudio</a>
-        <small>© 2026 Aria Estúdio de Beleza</small>
+        <div className="brand"><img className="brand-logo" src="/meraki-logo.svg" alt="Meraki Studio" /><span className="brand-name">meraki</span></div>
+        <p>Colocar sua essência em tudo o que você faz.</p>
+        <a href={INSTAGRAM} target="_blank" rel="noreferrer"><Instagram size={17} /> @merakistudiorj</a>
+        <small>© 2026 Meraki Studio</small>
       </footer>
     </div>
   );
