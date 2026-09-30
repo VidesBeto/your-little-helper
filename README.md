@@ -1,24 +1,29 @@
-# Your Little Helper
+# Aria — Estúdio de Beleza
 
-oi
+Landing page premium para um estúdio de beleza, criada para substituir a página placeholder do projeto `your-little-helper`.
 
-This project was built with [Lovable](https://lovable.dev).
+## Direção visual
+- Editorial, sofisticada e minimalista.
+- Paleta creme, areia, oliva e grafite.
+- Tipografia Playfair Display + DM Sans.
+- Layout responsivo para desktop e celular.
+- CTA de agendamento, serviços, experiência, depoimentos e contato.
 
-## Build with Lovable
+## Como usar no projeto original
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/a6b33174-6677-4898-8167-8f1e174c12c9).
+Copie o conteúdo desta pasta para a raiz do repositório `VidesBeto/your-little-helper`, preservando os arquivos de configuração do projeto caso já existam.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+```bash
+npm install
 npm run dev
 ```
+
+## Personalização
+Troque:
+- imagens em `src/routes/index.tsx`;
+- endereço e horário na seção de contato;
+- número do WhatsApp;
+- Instagram;
+- textos e serviços.
+
+As imagens usadas no protótipo são de demonstração. Para produção, substitua por fotos autorizadas do Aria.
