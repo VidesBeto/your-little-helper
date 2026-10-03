@@ -121,7 +121,7 @@ function MerakiHome() {
         </section>
 
         <section id="experiencia" className="experience">
-          <div className="experience-image"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=85" alt="Profissional realizando um tratamento de beleza" /></div>
+          <div className="experience-image"><img src="/meraki-03.png" alt="Profissional realizando um tratamento de beleza" /></div>
           <div className="experience-copy">
             <p className="eyebrow">A EXPERIÊNCIA MERAKI</p><h2>Entre.<br /><em>Respire.</em><br />Cuide-se.</h2>
             <p>Seu horário é reservado para você. Um atendimento com calma, conversa, diagnóstico e atenção aos detalhes — porque cada cabelo tem uma história diferente.</p>
