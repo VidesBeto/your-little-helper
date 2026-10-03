@@ -91,7 +91,7 @@ function MerakiHome() {
           </div>
           <div className="hero-image">
             <img src="/meraki-hero-generated.jpg" alt="Interior do Meraki Studio" />
-            <div className="hero-card"><span>MERAKI</span><strong>Colocar sua essência em tudo o que você faz.</strong></div>
+            
           </div>
         </section>
 
