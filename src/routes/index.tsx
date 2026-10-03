@@ -103,7 +103,7 @@ function MerakiHome() {
         <section className="intro-strip"><p>cuidado</p><span>✦</span><p>beleza</p><span>✦</span><p>presença</p><span>✦</span><p>essência</p></section>
 
         <section id="sobre" className="about section">
-          <div className="about-image"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Mulher em momento de autocuidado" /><div className="vertical-label">MERAKI STUDIO</div></div>
+          <div className="about-image"><img src="/meraki-02.png" alt="Meraki Studio" /><div className="vertical-label">MERAKI STUDIO</div></div>
           <div className="about-copy">
             <p className="eyebrow">SOBRE O MERAKI</p>
             <h2>Mais do que um serviço.<br /><em>Um cuidado com intenção.</em></h2>
