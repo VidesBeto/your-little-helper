@@ -90,7 +90,7 @@ function MerakiHome() {
             <div className="hero-note"><span className="dot" /> Atendimento exclusivamente com hora marcada</div>
           </div>
           <div className="hero-image">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Interior sofisticado de um estúdio de beleza" />
+            <img src="/01-PB.jpg" alt="Interior sofisticado de um estúdio de beleza" />
             <div className="hero-card"><span>MERAKI</span><strong>Colocar sua essência em tudo o que você faz.</strong></div>
           </div>
         </section>
