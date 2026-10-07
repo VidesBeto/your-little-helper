@@ -113,6 +113,13 @@ function MerakiHome() {
           </div>
         </section>
 
+        <section id="trabalhos" className="gallery section">
+          <div className="section-heading center"><p className="eyebrow">TRABALHOS REALIZADOS</p><h2>Resultados que <em>falam por si.</em></h2><p>Inspire-se em alguns dos cabelos realizados pelo Meraki Studio.</p></div>
+          <div className="gallery-grid">
+            {["/Trabalhos-1.PNG","/Trabalhos-2.PNG","/Trabalhos-3.PNG","/Trabalhos-4.PNG","/Trabalhos-5.PNG","/Trabalhos-6.PNG"].map((src, index) => <div className="gallery-item" key={src}><img src={src} alt={`Trabalho realizado no Meraki Studio ${index + 1}`} /></div>)}
+          </div>
+        </section>
+
         <section id="servicos" className="services section">
           <div className="section-heading center"><p className="eyebrow">SERVIÇOS DO ESTÚDIO</p><h2>Seu cabelo,<br /><em>do seu jeito.</em></h2><p>Escolha seu cuidado. A equipe Meraki cuida do resto.</p></div>
           <div className="services-grid">
