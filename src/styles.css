@@ -77,6 +77,12 @@ em { font-weight: 400; }
 .section-heading.center { text-align: center; max-width: 680px; margin: 0 auto 55px; }
 .section-heading.center .eyebrow { justify-content: center; }
 .section-heading > p:last-child { color: var(--muted); font-size: 13px; }
+.gallery { background: var(--paper); padding-top: 95px; padding-bottom: 95px; }
+.gallery .section-heading.center { margin-bottom: 38px; }
+.gallery-grid { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gallery-item { aspect-ratio: 1 / 1; overflow: hidden; background: var(--cream); position: relative; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s cubic-bezier(.2,.65,.2,1), filter .35s ease; }
+.gallery-item:hover img { transform: scale(1.045); filter: brightness(.94); }
 .services-grid { max-width: 1180px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .service-card { min-height: 205px; padding: 29px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .25s, transform .25s; }
 .service-card:hover { background: var(--paper); transform: translateY(-3px); }
@@ -146,7 +152,7 @@ em { font-weight: 400; }
   .hero, .about, .experience, .contact { grid-template-columns: 1fr; }
   .hero-copy { padding: 80px 7vw; }
   .hero-image { min-height: 65vh; }
-  .services-grid, .testimonial-grid { grid-template-columns: 1fr 1fr; }
+  .services-grid, .testimonial-grid { grid-template-columns: 1fr 1fr; }\n  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .experience-image { min-height: 55vh; }
   .experience-copy { padding: 80px 7vw; }
   .booking { flex-direction: column; align-items: flex-start; }
@@ -161,7 +167,7 @@ em { font-weight: 400; }
   .meaning-strip { justify-content: flex-start; padding: 25px 7vw; }
   .meaning-text { font-size: 18px; }
   .section { padding: 80px 7vw; }
-  .services-grid, .testimonial-grid { grid-template-columns: 1fr; }
+  .services-grid, .testimonial-grid { grid-template-columns: 1fr; }\n  .gallery { padding-top: 70px; padding-bottom: 70px; }\n  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 9px; }
   .vertical-label { display: none; }
   .footer { grid-template-columns: 1fr; }
 }
