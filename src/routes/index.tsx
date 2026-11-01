@@ -9,6 +9,7 @@ import { useState } from "react";
 export const Route = createFileRoute("/")({ component: MerakiHome });
 
 const WHATSAPP = "https://wa.link/tmu856";
+const serviceWhatsApp = (service: string) => `https://wa.me/?text=${encodeURIComponent(`Olá! Gostaria de agendar ${service}.`)}`;
 const INSTAGRAM = "https://www.instagram.com/merakistudiorj/";
 
 const services = [
@@ -126,7 +127,7 @@ function MerakiHome() {
         <section id="servicos" className="services section">
           <div className="section-heading center"><p className="eyebrow">SERVIÇOS DO ESTÚDIO</p><h2>Seu cabelo,<br /><em>do seu jeito.</em></h2><p>Escolha seu cuidado. A equipe Meraki cuida do resto.</p></div>
           <div className="services-grid">
-            {services.map(({ icon: Icon, title }) => <article className="service-card" key={title}><Icon size={24} strokeWidth={1.25} /><h3>{title}</h3><a href={WHATSAPP} target="_blank" rel="noopener noreferrer">Agendar este serviço <ArrowRight size={15} /></a></article>)}
+            {services.map(({ icon: Icon, title }) => <article className="service-card" key={title}><Icon size={24} strokeWidth={1.25} /><h3>{title}</h3><a href={serviceWhatsApp(title)} target="_blank" rel="noopener noreferrer">Agendar este serviço <ArrowRight size={15} /></a></article>)}
           </div>
         </section>
 
