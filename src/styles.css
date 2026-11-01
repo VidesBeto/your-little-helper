@@ -171,3 +171,29 @@ em { font-weight: 400; }
   .vertical-label { display: none; }
   .footer { grid-template-columns: 1fr; }
 }
+
+/* Protocolo de mechas */
+.protocol { background: var(--cream); }
+.protocol .section-heading { margin-bottom: 45px; }
+.protocol-intro, .protocol-included, .protocol-note { max-width: 1080px; margin: 0 auto 22px; padding: 30px 34px; background: #eee6dc; display: grid; grid-template-columns: 105px 1fr; gap: 28px; align-items: start; border-radius: 8px; }
+.protocol-number { font-family: "Playfair Display", serif; font-size: 38px; line-height: 1; color: #754a2e; border-right: 1px solid #b8a38d; padding-right: 24px; }
+.protocol h3 { margin: 0 0 13px; font-size: 13px; letter-spacing: .13em; text-transform: uppercase; font-weight: 500; }
+.protocol p { margin: 0; color: #5f574f; font-size: 13px; line-height: 1.8; }
+.protocol-included ul { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; color: #5f574f; font-size: 13px; }
+.protocol-included li::before { content: "✓"; display: inline-grid; place-items: center; width: 19px; height: 19px; margin-right: 9px; border-radius: 50%; background: #70472c; color: white; font-size: 11px; }
+.protocol-prep { max-width: 1080px; margin: 65px auto 0; }
+.protocol-prep-heading { text-align: center; margin-bottom: 30px; }
+.protocol-prep-heading .eyebrow { justify-content: center; margin-bottom: 12px; }
+.protocol-prep-heading h3, .protocol-care h3 { font-family: "Playfair Display", serif; font-size: 32px; font-weight: 400; letter-spacing: -.02em; text-transform: none; }
+.protocol-prep-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.protocol-prep-grid article { padding: 25px; background: var(--paper); border: 1px solid var(--line); }
+.protocol-prep-grid h4 { margin: 0 0 10px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.protocol-test { margin-top: 15px; padding: 22px 25px; background: #e4d4bf; }
+.protocol-test strong { display: block; margin-bottom: 6px; font-size: 13px; }
+.protocol-care { max-width: 1080px; margin: 55px auto 0; display: grid; grid-template-columns: 1fr 1fr; gap: 45px; }
+.protocol-care h3 { margin: 0 0 15px; }
+.protocol-price { max-width: 900px; margin: 45px auto 0; padding: 25px; text-align: center; background: #dfcdb5; display: grid; gap: 6px; }
+.protocol-price span { font-size: 11px; letter-spacing: .2em; }
+.protocol-price strong { font-family: "Playfair Display", serif; font-weight: 400; font-size: 27px; }
+.protocol-price a { display: inline-flex; justify-content: center; align-items: center; gap: 8px; font-size: 12px; margin-top: 8px; }
+@media (max-width: 650px) { .protocol-intro, .protocol-included, .protocol-note { padding: 22px; grid-template-columns: 55px 1fr; gap: 15px; } .protocol-number { font-size: 28px; padding-right: 12px; } .protocol-included ul, .protocol-prep-grid, .protocol-care { grid-template-columns: 1fr; } .protocol-prep-heading h3, .protocol-care h3 { font-size: 27px; } }
