@@ -71,6 +71,7 @@ function MerakiHome() {
         <nav className={openMenu ? "nav open" : "nav"}>
           <button onClick={() => scrollTo("sobre")}>O estúdio</button>
           <button onClick={() => scrollTo("servicos")}>Serviços</button>
+          <button onClick={() => scrollTo("protocolo")}>Explicação das técnicas</button>
           <button onClick={() => scrollTo("faq")}>Dúvidas</button>
           <button onClick={() => scrollTo("contato")}>Contato</button>
         </nav>
