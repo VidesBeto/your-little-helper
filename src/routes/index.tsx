@@ -131,6 +131,32 @@ function MerakiHome() {
           </div>
         </section>
 
+        <section id="protocolo" className="protocol section">
+          <div className="section-heading center"><p className="eyebrow">PREPARAÇÃO E CUIDADOS</p><h2>Explicação das <em>técnicas.</em></h2><p>Algumas recomendações para preparar seus fios e viver sua experiência de mechas com mais segurança e tranquilidade.</p></div>
+          <div className="protocol-intro">
+            <span className="protocol-number">01.</span><div><h3>Entenda como funciona</h3><p>O tom escolhido — mais dourado, mais frio, mais claro ou mais escuro — não define a técnica nem altera o valor do serviço. As técnicas se diferenciam pela quantidade de mechas realizadas; é essa quantidade de trabalho que influencia o valor final.</p></div>
+          </div>
+          <div className="protocol-included">
+            <span className="protocol-number">02.</span><div><h3>O que está incluído no protocolo?</h3><ul><li>Avaliação personalizada</li><li>Diagnóstico completo</li><li>Teste de mecha</li><li>Técnica de mechas</li><li>Tonelização para o tom desejado</li><li>Reconstrução profunda</li><li>Corte personalizado</li><li>Finalização profissional</li></ul></div>
+          </div>
+          <div className="protocol-note"><span className="protocol-number">03.</span><div><h3>Uma informação importante</h3><p>Os itens do protocolo são definidos após a avaliação e podem ser ajustados conforme a necessidade do seu cabelo, para buscar o melhor resultado.</p></div></div>
+          <div className="protocol-prep">
+            <div className="protocol-prep-heading"><p className="eyebrow">ANTES DO SEU HORÁRIO</p><h3>Como preparar os fios</h3></div>
+            <div className="protocol-prep-grid">
+              <article><h4>Na véspera ou no dia</h4><p>Lave o cabelo um dia antes (ou no mesmo dia, se necessário), usando apenas shampoo — de preferência hidratante ou neutro. Se estiver muito ressecado, use um pouco de condicionador somente nas pontas e enxágue muito bem.</p></article>
+              <article><h4>Evite finalizadores</h4><p>No dia do procedimento, não use cremes para pentear, leave-ins, óleos reparadores ou de umectação, protetores térmicos ou outros finalizadores.</p></article>
+              <article><h4>Avise sobre piscina</h4><p>Se esteve recentemente na piscina, avise-nos com antecedência. O cloro e resíduos da água podem causar reações indesejadas durante o clareamento.</p></article>
+              <article><h4>Informe sobre água de poço</h4><p>Se utiliza água de poço artesiano em casa, informe no agendamento para avaliarmos possíveis interferências no resultado das mechas.</p></article>
+            </div>
+            <div className="protocol-test"><strong>Teste de mecha obrigatório</strong><p>Antes de iniciar as mechas, realizamos o teste para avaliar a resistência e a compatibilidade dos fios com a descoloração.</p></div>
+          </div>
+          <div className="protocol-care">
+            <div><p className="eyebrow">CUIDADO CONTÍNUO</p><h3>Seu cabelo merece atenção também em casa.</h3><p>Após as mechas, mantenha uma rotina de cuidados com produtos profissionais. Se desejar preparar os fios para a descoloração, oferecemos um cronograma capilar de 4 sessões, pensado para fortalecer e melhorar a resistência dos cabelos.</p></div>
+            <div><h3>Um guia para acompanhar você</h3><p>Após o atendimento, enviamos um manual digital com sugestões de produções e dicas de cuidados para você manter os fios em casa.</p></div>
+          </div>
+          <div className="protocol-price"><span>VALOR DEFINIDO APÓS</span><strong>AVALIAÇÃO</strong><a href={WHATSAPP} target="_blank" rel="noopener noreferrer">Agende sua avaliação <ArrowRight size={15}/></a></div>
+        </section>
+
         <section id="experiencia" className="experience">
           <div className="experience-image"><img src="/meraki-03.png" alt="Profissional realizando um tratamento de beleza" /></div>
           <div className="experience-copy">
