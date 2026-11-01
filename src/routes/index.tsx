@@ -9,7 +9,7 @@ import { useState } from "react";
 export const Route = createFileRoute("/")({ component: MerakiHome });
 
 const WHATSAPP = "https://wa.link/tmu856";
-const serviceWhatsApp = (service: string) => `https://wa.me/?text=${encodeURIComponent(`Olá! Gostaria de agendar ${service}.`)}`;
+const serviceWhatsApp = (service: string) => `https://api.whatsapp.com/send?phone=5521986079454&text=${encodeURIComponent(`Olá! Gostaria de agendar ${service}.`)}`;
 const INSTAGRAM = "https://www.instagram.com/merakistudiorj/";
 
 const services = [
