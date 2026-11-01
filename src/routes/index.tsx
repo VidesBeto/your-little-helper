@@ -40,6 +40,9 @@ const faqs = [
   ["Quanto tempo preciso esperar para fazer outra química?", "Recomendamos um intervalo mínimo de 1 mês, sempre avaliando a saúde do cabelo."],
   ["De quanto em quanto tempo preciso retocar as mechas ou a progressiva?", "Depende do crescimento e da necessidade de cada cabelo."],
   ["O atendimento é somente com hora marcada?", "Sim! Nosso atendimento é exclusivamente com hora marcada."],
+  ["Quais são as formas de pagamento?", "Aceitamos Pix, dinheiro, crédito e débito. Parcelamos serviços acima de R$ 299 em até 3x sem juros."],
+  ["Preciso pagar sinal para agendar?", "O sinal é solicitado apenas para alguns serviços, sendo informado no momento do agendamento."],
+  ["É permitido acompanhante?", "Não trabalhamos com acompanhantes devido ao espaço reduzido do Studio. Agradecemos a compreensão!"],
 ] as const;
 
 const testimonials = [
